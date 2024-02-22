@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: RegressorProject
+Version: 0.0.1
+Author: Chinmaya Tewari
+Author-email: chinmayatewari.20@gmail.com
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: Flask
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: scikit-learn
