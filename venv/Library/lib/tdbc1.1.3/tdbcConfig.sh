@@ -24,8 +24,8 @@ TDBC_BUILD_LIB_SPEC="@tdbc_BUILD_LIB_SPEC@"
 
 # String to pass to the linker to pick up the TDBC library from its installed
 # dir.
-tdbc_LIB_SPEC="D:/WORK/PYTHON/machine learning/Linear Regression/venv\Library\lib\tdbc1.1.3\tdbc113t.dll"
-TDBC_LIB_SPEC="D:/WORK/PYTHON/machine learning/Linear Regression/venv\Library\lib\tdbc1.1.3\tdbc113t.dll"
+tdbc_LIB_SPEC="D:/WORK/PYTHON/Projects/GEMSTONE REGRESSION/venv\Library\lib\tdbc1.1.3\tdbc113t.dll"
+TDBC_LIB_SPEC="D:/WORK/PYTHON/Projects/GEMSTONE REGRESSION/venv\Library\lib\tdbc1.1.3\tdbc113t.dll"
 
 # Name of the TBDC stub library
 tdbc_STUB_LIB_FILE="tdbcstub113.lib"
@@ -38,16 +38,16 @@ TDBC_BUILD_STUB_LIB_SPEC="C:\ci\tk_1654036608655\work\tcl8.6.12\pkgs\tdbc1.1.3\w
 
 # String to pass to the linker to pick up the TDBC stub library from its
 # installed directory
-tdbc_STUB_LIB_SPEC="D:/WORK/PYTHON/machine learning/Linear Regression/venv\Library\lib\tdbc1.1.3\tdbcstub113.lib"
-TDBC_STUB_LIB_SPEC="D:/WORK/PYTHON/machine learning/Linear Regression/venv\Library\lib\tdbc1.1.3\tdbcstub113.lib"
+tdbc_STUB_LIB_SPEC="D:/WORK/PYTHON/Projects/GEMSTONE REGRESSION/venv\Library\lib\tdbc1.1.3\tdbcstub113.lib"
+TDBC_STUB_LIB_SPEC="D:/WORK/PYTHON/Projects/GEMSTONE REGRESSION/venv\Library\lib\tdbc1.1.3\tdbcstub113.lib"
 
 # Path name of the TDBC stub library in its build directory
 tdbc_BUILD_STUB_LIB_PATH="C:\ci\tk_1654036608655\work\tcl8.6.12\pkgs\tdbc1.1.3\win\Release_AMD64_VC1916\tdbcstub113.lib"
 TDBC_BUILD_STUB_LIB_PATH="C:\ci\tk_1654036608655\work\tcl8.6.12\pkgs\tdbc1.1.3\win\Release_AMD64_VC1916\tdbcstub113.lib"
 
 # Path name of the TDBC stub library in its installed directory
-tdbc_STUB_LIB_PATH="D:/WORK/PYTHON/machine learning/Linear Regression/venv\Library\lib\tdbc1.1.3\tdbcstub113.lib"
-TDBC_STUB_LIB_PATH="D:/WORK/PYTHON/machine learning/Linear Regression/venv\Library\lib\tdbc1.1.3\tdbcstub113.lib"
+tdbc_STUB_LIB_PATH="D:/WORK/PYTHON/Projects/GEMSTONE REGRESSION/venv\Library\lib\tdbc1.1.3\tdbcstub113.lib"
+TDBC_STUB_LIB_PATH="D:/WORK/PYTHON/Projects/GEMSTONE REGRESSION/venv\Library\lib\tdbc1.1.3\tdbcstub113.lib"
 
 # Location of the top-level source directories from which TDBC was built.
 # This is the directory that contains doc/, generic/ and so on.  If TDBC
@@ -59,8 +59,8 @@ TDBC_SRC_DIR="C:\ci\tk_1654036608655\work\tcl8.6.12\pkgs\tdbc1.1.3\win\.."
 
 # String to pass to the compiler so that an extension can find installed TDBC
 # headers
-tdbc_INCLUDE_SPEC="-ID:/WORK/PYTHON/machine learning/Linear Regression/venv\Library\lib\..\include"
-TDBC_INCLUDE_SPEC="-ID:/WORK/PYTHON/machine learning/Linear Regression/venv\Library\lib\..\include"
+tdbc_INCLUDE_SPEC="-ID:/WORK/PYTHON/Projects/GEMSTONE REGRESSION/venv\Library\lib\..\include"
+TDBC_INCLUDE_SPEC="-ID:/WORK/PYTHON/Projects/GEMSTONE REGRESSION/venv\Library\lib\..\include"
 
 # String to pass to the compiler so that an extension can find TDBC headers
 # in the source directory
@@ -68,8 +68,8 @@ tdbc_BUILD_INCLUDE_SPEC="-IC:\ci\tk_1654036608655\work\tcl8.6.12\pkgs\tdbc1.1.3\
 TDBC_BUILD_INCLUDE_SPEC="-IC:\ci\tk_1654036608655\work\tcl8.6.12\pkgs\tdbc1.1.3\win\..\generic"
 
 # Path name where .tcl files in the tdbc package appear at run time.
-tdbc_LIBRARY_PATH="D:/WORK/PYTHON/machine learning/Linear Regression/venv\Library\lib\tdbc1.1.3"
-TDBC_LIBRARY_PATH="D:/WORK/PYTHON/machine learning/Linear Regression/venv\Library\lib\tdbc1.1.3"
+tdbc_LIBRARY_PATH="D:/WORK/PYTHON/Projects/GEMSTONE REGRESSION/venv\Library\lib\tdbc1.1.3"
+TDBC_LIBRARY_PATH="D:/WORK/PYTHON/Projects/GEMSTONE REGRESSION/venv\Library\lib\tdbc1.1.3"
 
 # Path name where .tcl files in the tdbc package appear at build time.
 tdbc_BUILD_LIBRARY_PATH="C:\ci\tk_1654036608655\work\tcl8.6.12\pkgs\tdbc1.1.3\win\../library"

@@ -1,8 +1,8 @@
-prefix=D:/WORK/PYTHON/machine learning/Linear Regression/venv/Library
-exec_prefix=D:/WORK/PYTHON/machine learning/Linear Regression/venv/Library
-libdir=D:/WORK/PYTHON/machine learning/Linear Regression/venv/Library/lib
-sharedlibdir=D:/WORK/PYTHON/machine learning/Linear Regression/venv/Library/lib
-includedir=D:/WORK/PYTHON/machine learning/Linear Regression/venv/Library/include
+prefix=D:/WORK/PYTHON/Projects/GEMSTONE REGRESSION/venv/Library
+exec_prefix=D:/WORK/PYTHON/Projects/GEMSTONE REGRESSION/venv/Library
+libdir=D:/WORK/PYTHON/Projects/GEMSTONE REGRESSION/venv/Library/lib
+sharedlibdir=D:/WORK/PYTHON/Projects/GEMSTONE REGRESSION/venv/Library/lib
+includedir=D:/WORK/PYTHON/Projects/GEMSTONE REGRESSION/venv/Library/include
 
 Name: zlib
 Description: zlib compression library
