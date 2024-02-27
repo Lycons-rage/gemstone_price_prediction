@@ -3,6 +3,7 @@
 
 import os   # if not used then we won't be able to properly deploy it on a linux server
 import sys
+sys.path(['..src'])
 from src.exception import CustomException
 from src.logger import logging
 import pandas as pd
