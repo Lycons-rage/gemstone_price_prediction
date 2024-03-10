@@ -3,13 +3,16 @@
 
 import os   # if not used then we won't be able to properly deploy it on a linux server
 import sys
-sys.path(['..src'])
+current = os.path.dirname(os.path.realpath("data_ingestion.py"))
+parent = os.path.dirname(current)
+sys.path.append(current)
 from src.exception import CustomException
 from src.logger import logging
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass   # study about it
 
+from src.components.data_transformation import DataTransformation
 
 # initialise data ingestion configuration
 
@@ -34,7 +37,7 @@ class DataIngestion:
         try:
             # for exception that may occur during data ingestion
             # code that we need to execute
-            df = pd.read_csv('../notebooks/data/gemstone.csv')  # change this line when reading from anywhere else
+            df = pd.read_csv('notebooks/data/gemstone.csv')  # change this line when reading from anywhere else
                             # we know why '../' is used
             # we will be using all the genric functions to import from mongo or mysql in utils.py file
             logging.info("Dataset read as pandas dataframe")
@@ -62,5 +65,6 @@ class DataIngestion:
         
 if __name__=='__main__':
     obj=DataIngestion()
-    train_path, test_path = obj.initiate_data_ingestion()
-    print(f"Train path: {train_path}\nTest path: {test_path}")
+    train_data_path, test_data_path = obj.initiate_data_ingestion()
+    data_tranformation = DataTransformation()
+    train_arr, test_arr, _ = data_tranformation.initiate_data_transformation(train_data_path, test_data_path)
