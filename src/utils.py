@@ -7,6 +7,7 @@ import pickle
 import pandas as pd
 import numpy as np
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
+from distutils.sysconfig import customize_compiler
 
 from src.exception import CustomException
 from src.logger import logging
@@ -51,4 +52,14 @@ def evaluate_model(X_train, y_train, X_test, y_test, models):
     
     except Exception as e:
         logging.info("EXCEPTION OCCURRED WHILE TRAINING MODEL AND EVALUATION OF MODEL")
+        raise CustomException(e, sys)
+    
+# to load pickle files
+def load_object(file_path):
+    try:
+        with open(file_path, 'rb') as file_obj:
+            return pickle.load(file_obj)
+        
+    except Exception as e:
+        logging.info("EXCEPTION OCCURRED WHILE LOADING PICKLE FILE")
         raise CustomException(e, sys)

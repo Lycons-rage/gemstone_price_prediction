@@ -1,0 +1,65 @@
+<!-- FORM TO GET DATA FOR GEMSTONE PRICE PREDICTION MODEL -->
+<body>
+    <form action ="{{url_for('predict')}}", method="post">
+        <div>
+            <label for="carat">CARAT : </label>
+            <input type="text", name="carat", id="carat", placeholder="Enter Carat Value" /><br>
+        </div>
+        <div>
+            <label for="depth">DEPTH : </label>
+            <input type="text", name="depth", id="depth", placeholder="Enter Depth Value" /><br>
+        </div>
+        <div>
+            <label for="table">TABLE : </label>
+            <input type="text", name="table", id="table", placeholder="Enter Table Value" /><br>
+        </div>
+        <div>
+            <label for="x">X : </label>
+            <input type="text", name="x", id="x", placeholder="Enter X Value" /><br>
+        </div>
+        <div>
+            <label for="y">Y : </label>
+            <input type="text", name="y", id="y", placeholder="Enter Y Value" /><br>
+        </div>
+        <div>
+            <label for="z">Z : </label>
+            <input type="text", name="z", id="z", placeholder="Enter Z Value" /><br>
+        </div>
+        <div>
+            <label for="cut">CUT : </label>
+            <select name="cut">
+                <option value="Fair">Fair</option>
+                <option value="Good">Good</option>
+                <option value="Very Good">Very Good</option>
+                <option value="Premium">Premium</option>
+                <option value="Ideal">Ideal</option>
+            </select><br>
+        </div>
+        <div>
+            <label for="color">COLOR : </label>
+            <select>
+                <option value = "D">D</option>
+                <option value = "E">E</option>
+                <option value = "F">F</option>
+                <option value = "G">G</option>
+                <option value = "H">H</option>
+                <option value = "I">I</option>
+                <option value = "J">J</option>
+            </select><br>
+        </div>
+        <div>
+            <label for="clarity">CLARITY : </label>
+            <select>
+                <option value = "I1">I1</option>
+                <option value = "SI2">SI2</option>
+                <option value = "SI1">SI1</option>
+                <option value = "VS2">VS2</option>
+                <option value = "VS1">VS1</option>
+                <option value = "VVS2">VVS2</option>
+                <option value = "VVS1">VVS1</option>
+                <option value = "IF">IF</option>
+            </select><br>
+        </div>
+        <input type="submit" value="PREDICT" />
+    </form>
+</body>
