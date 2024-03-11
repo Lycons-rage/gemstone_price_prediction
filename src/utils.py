@@ -7,7 +7,6 @@ import pickle
 import pandas as pd
 import numpy as np
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
-from distutils.sysconfig import customize_compiler
 
 from src.exception import CustomException
 from src.logger import logging
