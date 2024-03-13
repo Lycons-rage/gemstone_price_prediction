@@ -12,12 +12,9 @@ app = application
 def home_page():
     return render_template("index.html")
 
-@app.route("/predict")
+@app.route("/predict", methods=["GET", "POST"])
 def predict():
-    if request.method == "GET":
-        return render_template("form.html")
-    
-    else:
+    if request.method == "POST":
         # else part is going to be POST request
         # fetching data from form
         data = CustomData(
@@ -35,9 +32,12 @@ def predict():
         final_df = data.get_data_as_dataframe()
         prediction_pipeline = PredictPipeline
         
-        pred = prediction_pipeline.predict(final_df)
+        pred = prediction_pipeline.predict(self=prediction_pipeline, features=final_df)
         result = round(pred[0],2)
         return render_template("result.html", final_result = result)
+    
+    else:
+        return render_template("form.html")
         
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=6969, debug=True)

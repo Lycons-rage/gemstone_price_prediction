@@ -1,6 +1,6 @@
 <!-- FORM TO GET DATA FOR GEMSTONE PRICE PREDICTION MODEL -->
 <body>
-    <form action ="{{url_for('predict')}}", method="post">
+    <form action ="/predict", method="post">
         <div>
             <label for="carat">CARAT : </label>
             <input type="text", name="carat", id="carat", placeholder="Enter Carat Value" /><br>
@@ -37,7 +37,7 @@
         </div>
         <div>
             <label for="color">COLOR : </label>
-            <select>
+            <select name = "color">
                 <option value = "D">D</option>
                 <option value = "E">E</option>
                 <option value = "F">F</option>
@@ -49,7 +49,7 @@
         </div>
         <div>
             <label for="clarity">CLARITY : </label>
-            <select>
+            <select name = "clarity">
                 <option value = "I1">I1</option>
                 <option value = "SI2">SI2</option>
                 <option value = "SI1">SI1</option>
