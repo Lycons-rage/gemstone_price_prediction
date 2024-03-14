@@ -1,0 +1,52 @@
+.center-align
+{
+    margin: auto;
+    width: 70%;
+    padding: 2px;
+}
+
+.internal-content
+{
+    width: 100%;
+}
+
+.internal-title
+{
+    margin: auto;
+    width: 80%;
+    background-color: #18313B;
+    text-align: center;   
+    color: #ffffff;
+    
+}
+
+.bottom-title
+{
+    margin: auto;
+    width: 80%;
+    background-color: #1f7034;
+    text-align: center;   
+    color: #ffffff;
+    
+}
+
+h4
+{
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 50;
+}
+
+table, th, td {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    width: 70%;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.dynamic-content
+{
+    font-size: 25;
+}
