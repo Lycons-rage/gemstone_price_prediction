@@ -33,7 +33,7 @@ def predict():
         prediction_pipeline = PredictPipeline
         
         pred = prediction_pipeline.predict(self=prediction_pipeline, features=final_df)
-        result = round(pred[0],2)
+        result = [round(pred[0],2), final_df]
         return render_template("result.html", final_result = result)
     
     else:

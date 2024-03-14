@@ -1,1 +1,72 @@
-<h1>{{final_result}}</h1>
+
+<head>
+    <title>Diamond Price Predictor</title>
+
+    <link rel = "stylesheet", type = "text/css", href = "{{url_for('static', filename = 'css/style.css')}}">
+    <link rel = "stylesheet", type = "text/css", href = "{{url_for('static', filename = 'css/bootstrap.css')}}">
+    <link rel = "stylesheet", type = "text/css", href = "{{url_for('static', filename = 'css/responsive.css')}}">
+</head>
+
+<body class="sub_page">
+<h1>{{final_result[0]}}</h1>
+
+<section class="freelance_section layout_padding">
+    <div id="accordion">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5 offset-md-1">
+            <div class="detail-box">
+              <div class="heading_container">
+                <h2>
+                  PREDICTION REPORT
+                </h2>
+              </div>
+              <div class="tab_container">
+                <!---->
+                {%for i in final_result[1].columns%}
+                <div class="t-link-box" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <div class="detail-box">
+                    <h5>
+                      {{i.upper()}}
+                    </h5>
+                    <h3>
+                        {{final_result[1][i].values[0]}}
+                      </h3>
+                  </div>
+                </div>
+                {%endfor%}
+                <!---->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="collapse show" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="img-box">
+                <img src="{{url_for('static', filename = 'images/freelance-img.jpg')}}" alt="">
+              </div>
+            </div>
+            <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="img-box">
+                <img src="images/freelance-img.jpg" alt="">
+              </div>
+            </div>
+            <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="img-box">
+                <img src="images/freelance-img.jpg" alt="">
+              </div>
+            </div>
+            <div class="collapse" id="collapseFour" aria-labelledby="headingfour" data-parent="#accordion">
+              <div class="img-box">
+                <img src="images/freelance-img.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end freelance section -->
+
+</body>
+</html>

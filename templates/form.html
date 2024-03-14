@@ -1,65 +1,119 @@
 <!-- FORM TO GET DATA FOR GEMSTONE PRICE PREDICTION MODEL -->
-<body>
-    <form action ="/predict", method="post">
-        <div>
-            <label for="carat">CARAT : </label>
-            <input type="text", name="carat", id="carat", placeholder="Enter Carat Value" /><br>
+<html>
+<head>
+    <title>Diamond Price Predictor</title>
+
+    <link rel = "stylesheet", type = "text/css", href = "{{url_for('static', filename = 'css/style.css')}}">
+    <link rel = "stylesheet", type = "text/css", href = "{{url_for('static', filename = 'css/bootstrap.css')}}">
+    <link rel = "stylesheet", type = "text/css", href = "{{url_for('static', filename = 'css/responsive.css')}}">
+</head>
+    <body class="sub_page">    
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+          <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container">
+              <a class="navbar-brand" href="/">
+                <img src="{{url_for('static', filename = 'images/logo.png')}}" alt="" />
+                <span>
+                  Diamond Price Predictor
+                </span>
+              </a>
+            </nav>
+          </div>
+        </header>
+        <!-- end header section -->
+      </div>
+      <br><br>
+    <section class="about_section layout_padding-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-lg-9 mx-auto">
+            </div>
+          </div>
+          <div class="detail-box">
+            <h2>
+              DIAMOND SPECIFICATIONS
+            </h2>
+            <p>
+                <form action ="/predict", method="post">
+                    <div>
+                        <label for="carat">CARAT : </label>
+                        <input type="text", name="carat", id="carat", placeholder="Enter Carat Value" /><br><br>
+                    </div>
+                    <div>
+                        <label for="depth">DEPTH : </label>
+                        <input type="text", name="depth", id="depth", placeholder="Enter Depth Value" /><br><br>
+                    </div>
+                    <div>
+                        <label for="table">TABLE : </label>
+                        <input type="text", name="table", id="table", placeholder="Enter Table Value" /><br><br>
+                    </div>
+                    <div>
+                        <label for="x">X : </label>
+                        <input type="text", name="x", id="x", placeholder="Enter X Value" /><br><br>
+                    </div>
+                    <div>
+                        <label for="y">Y : </label>
+                        <input type="text", name="y", id="y", placeholder="Enter Y Value" /><br><br>
+                    </div>
+                    <div>
+                        <label for="z">Z : </label>
+                        <input type="text", name="z", id="z", placeholder="Enter Z Value" /><br><br>
+                    </div>
+                    <div>
+                        <label for="cut">CUT : </label>
+                        <select name="cut">
+                            <option value="Fair">Fair</option>
+                            <option value="Good">Good</option>
+                            <option value="Very Good">Very Good</option>
+                            <option value="Premium">Premium</option>
+                            <option value="Ideal">Ideal</option>
+                        </select><br><br>
+                    </div>
+                    <div>
+                        <label for="color">COLOR : </label>
+                        <select name = "color">
+                            <option value = "D">D</option>
+                            <option value = "E">E</option>
+                            <option value = "F">F</option>
+                            <option value = "G">G</option>
+                            <option value = "H">H</option>
+                            <option value = "I">I</option>
+                            <option value = "J">J</option>
+                        </select><br><br>
+                    </div>
+                    <div>
+                        <label for="clarity">CLARITY : </label>
+                        <select name = "clarity">
+                            <option value = "I1">I1</option>
+                            <option value = "SI2">SI2</option>
+                            <option value = "SI1">SI1</option>
+                            <option value = "VS2">VS2</option>
+                            <option value = "VS1">VS1</option>
+                            <option value = "VVS2">VVS2</option>
+                            <option value = "VVS1">VVS1</option>
+                            <option value = "IF">IF</option>
+                        </select><br><br>
+                    </div>
+                    <input type="submit" value="PREDICT" style="display: inline-block;
+                    padding: 10px 45px;
+                    background-color: #ff4f5a;
+                    color: #ffffff;
+                    -webkit-transition: all 0.3s;
+                    transition: all 0.3s;
+                    border: 1px solid transparent;
+                    border-radius: 0;
+                    margin-top: 25px;"/>
+                </form>            
+            </p>
+          </div>
         </div>
-        <div>
-            <label for="depth">DEPTH : </label>
-            <input type="text", name="depth", id="depth", placeholder="Enter Depth Value" /><br>
-        </div>
-        <div>
-            <label for="table">TABLE : </label>
-            <input type="text", name="table", id="table", placeholder="Enter Table Value" /><br>
-        </div>
-        <div>
-            <label for="x">X : </label>
-            <input type="text", name="x", id="x", placeholder="Enter X Value" /><br>
-        </div>
-        <div>
-            <label for="y">Y : </label>
-            <input type="text", name="y", id="y", placeholder="Enter Y Value" /><br>
-        </div>
-        <div>
-            <label for="z">Z : </label>
-            <input type="text", name="z", id="z", placeholder="Enter Z Value" /><br>
-        </div>
-        <div>
-            <label for="cut">CUT : </label>
-            <select name="cut">
-                <option value="Fair">Fair</option>
-                <option value="Good">Good</option>
-                <option value="Very Good">Very Good</option>
-                <option value="Premium">Premium</option>
-                <option value="Ideal">Ideal</option>
-            </select><br>
-        </div>
-        <div>
-            <label for="color">COLOR : </label>
-            <select name = "color">
-                <option value = "D">D</option>
-                <option value = "E">E</option>
-                <option value = "F">F</option>
-                <option value = "G">G</option>
-                <option value = "H">H</option>
-                <option value = "I">I</option>
-                <option value = "J">J</option>
-            </select><br>
-        </div>
-        <div>
-            <label for="clarity">CLARITY : </label>
-            <select name = "clarity">
-                <option value = "I1">I1</option>
-                <option value = "SI2">SI2</option>
-                <option value = "SI1">SI1</option>
-                <option value = "VS2">VS2</option>
-                <option value = "VS1">VS1</option>
-                <option value = "VVS2">VVS2</option>
-                <option value = "VVS1">VVS1</option>
-                <option value = "IF">IF</option>
-            </select><br>
-        </div>
-        <input type="submit" value="PREDICT" />
-    </form>
+      </section>
+
+
+    <center>
+    
+    </center>
 </body>
+</html>
