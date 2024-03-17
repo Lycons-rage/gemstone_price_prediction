@@ -17,13 +17,27 @@ def predict():
     if request.method == "POST":
         # else part is going to be POST request
         # fetching data from form
+        
+        # form validation
+        try:
+            carat_value = float(request.form.get("carat"))
+            depth_value = float(request.form.get("depth"))
+            table_value = float(request.form.get("table"))
+            x_value = float(request.form.get("x"))
+            y_value = float(request.form.get("y"))
+            z_value = float(request.form.get("z"))
+            
+        except Exception as e:
+            return render_template("form.html", exception = e) 
+        
+        
         data = CustomData(
-            carat = float(request.form.get("carat")),
-            depth = float(request.form.get("depth")),
-            table = float(request.form.get("table")),
-            x = float(request.form.get("x")),
-            y = float(request.form.get("y")),
-            z = float(request.form.get("z")),
+            carat = carat_value,
+            depth = depth_value,
+            table = table_value,
+            x = x_value,
+            y = y_value,
+            z = z_value,
             cut = request.form.get("cut"),
             color = request.form.get("color"),
             clarity = request.form.get("clarity")
