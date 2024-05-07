@@ -5,6 +5,8 @@ RegressorProject.egg-info/SOURCES.txt
 RegressorProject.egg-info/dependency_links.txt
 RegressorProject.egg-info/requires.txt
 RegressorProject.egg-info/top_level.txt
+db/__init__.py
+db/db.py
 src/__init__.py
 src/exception.py
 src/logger.py
